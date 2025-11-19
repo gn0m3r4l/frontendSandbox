@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org" lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>BusyLight Dashboard</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Headline -->
+    <h1 class="headline">BusyLight Status Übersicht</h1>
+
+    <!-- State Cards Section -->
+    <div id="stateList" class="state-container">
+        <!-- Wird per JS gefüllt -->
+    </div>
+
+    <!-- Log Section -->
+    <h2 class="headline-small">System Log</h2>
+    <div id="logView" class="log-view">
+        <!-- Logs werden per JS appended -->
+    </div>
+
+</div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
