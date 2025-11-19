@@ -2,8 +2,8 @@ name: Attach TAR.GZ files to release
 
 on:
   release:
-    types: [published]
-  workflow_dispatch:
+    types:
+      - created
 
 jobs:
   upload-assets:
