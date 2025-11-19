@@ -16,13 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4   # ✅ RICHTIG!
 
-      - name: Create dummy tar.gz for testing
+      - name: Build tempfile
         run: |
-          echo "Erzeuge Dummy-Datei (5 MB)…"
-          dd if=/dev/zero of=dummy.bin bs=1M count=5
-          tar -czf test.tar.gz dummy.bin
-          rm dummy.bin
-          echo "Dummy-Datei test.tar.gz erzeugt."
+          sh ./dummy.sh
 
       - name: Find .tar.gz files
         id: find_files
