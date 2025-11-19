@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: softprops/action-gh-release@v2
 
       # ---------------------------------------------------------
       # Testmodus: Dummy-5MB-tar.gz erzeugen (nur bei dispatch)
