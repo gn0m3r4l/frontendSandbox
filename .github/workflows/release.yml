@@ -17,7 +17,7 @@ jobs:
       # Testmodus: Dummy-5MB-tar.gz erzeugen (nur bei dispatch)
       # ---------------------------------------------------------
       - name: Create dummy tar.gz for testing
-        if: github.event_name == 'workflow_dispatch'
+        #if: github.event_name == 'workflow_dispatch'
         run: |
           echo "Erzeuge Dummy-Datei (5 MB)…"
           # 5 MB Raw-Datei
