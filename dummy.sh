@@ -1,12 +1,6 @@
 #!/bin/bash
-files=$(find . -type f -name "*.tar.gz")
-          if [ -z "$files" ]; then
-            echo "Keine .tar.gz-Dateien gefunden."
-            echo "files=" >> $GITHUB_OUTPUT
-          else
-            echo "Gefundene Dateien:"
-            echo "$files"
-            echo "files<<EOF" >> $GITHUB_OUTPUT
-            echo "$files" >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
-          fi
+ echo "Erzeuge Dummy-Datei (5 MB)…"
+          dd if=/dev/zero of=dummy.bin bs=1M count=5
+          tar -czf test.tar.gz dummy.bin
+          rm dummy.bin
+          echo "Dummy-Datei test.tar.gz erzeugt."
