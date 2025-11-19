@@ -1,9 +1,9 @@
 name: Attach TAR.GZ files to release
 
 on:
-  release:
-    types:
-      - created
+  push:
+    tags:
+      - "*"
 
 jobs:
   upload-assets:
