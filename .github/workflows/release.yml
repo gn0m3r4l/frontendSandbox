@@ -3,7 +3,7 @@ name: Attach TAR.GZ files to release
 on:
   release:
     types:
-      - created
+      - published
 
 jobs:
   upload-assets:
