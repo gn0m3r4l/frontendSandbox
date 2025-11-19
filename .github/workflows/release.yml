@@ -49,7 +49,7 @@ jobs:
       # Upload nur bei echten Releases
       # ---------------------------------------------------------
       - name: Upload each .tar.gz to release
-        if: github.event_name == 'release' && steps.find_files.outputs.files != ''
+        if: steps.find_files.outputs.files != ''
         uses: softprops/action-gh-release@v2
         with:
           files: |
